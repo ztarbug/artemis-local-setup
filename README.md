@@ -22,6 +22,7 @@ Consider using TMux to have log outputs of both instances in an compact overview
 
 ### Replica
 
+TODO
 
 ## How to setup
 Shell setup.sh script will download Artemis and create broker examples. You have to provide a version number such that the desired Artemis release will be used. Sample call
@@ -34,4 +35,7 @@ Pre-requisites: Bash and an internet connection.
 
 ## Where to find more info
 * Artemis repo https://github.com/apache/activemq-artemis 
-* Artemis docu https://activemq.apache.org/components/artemis/ 
+* Artemis docu https://activemq.apache.org/components/artemis/
+
+# Sample Client
+This repository also contains a sample consumer/producer with which you can test the various setups. More details can be found in folder [jms-demo-client](jms-demo-client)

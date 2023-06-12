@@ -3,8 +3,8 @@
       </ha-policy>
 
       <connectors>
-         <connector name="broker01">tcp://localhost:61616</connector>
-         <connector name="broker02">tcp://localhost:61617</connector>
+         <connector name="replica01">tcp://localhost:61616</connector>
+         <connector name="replica02">tcp://localhost:61617</connector>
       </connectors>         
 
       <broadcast-groups>
@@ -14,7 +14,7 @@
             <group-address>231.7.7.7</group-address>
             <group-port>9876</group-port>
             <broadcast-period>2000</broadcast-period>
-            <connector-ref>broker01</connector-ref>
+            <connector-ref>replica01</connector-ref>
          </broadcast-group>
       </broadcast-groups>
 
@@ -29,7 +29,7 @@
 
       <cluster-connections>
          <cluster-connection name="test-connection">
-            <connector-ref>broker01</connector-ref>
+            <connector-ref>replica01</connector-ref>
             <retry-interval>500</retry-interval>
             <retry-interval-multiplier>1.1</retry-interval-multiplier>
             <max-retry-interval>5000</max-retry-interval>
@@ -39,8 +39,8 @@
             <max-hops>1</max-hops>
             
             <static-connectors>
-               <connector-ref>broker01</connector-ref>
-               <connector-ref>broker02</connector-ref>
+               <connector-ref>replica01</connector-ref>
+               <connector-ref>replica02</connector-ref>
             </static-connectors>
          </cluster-connection>
       </cluster-connections>

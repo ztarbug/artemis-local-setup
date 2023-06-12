@@ -93,9 +93,9 @@ function create_replica(){
     cwd=$(pwd)
     cd artemis/${ARTEMIS_VERSION}/bin
     echo "create master node"
-    ./artemis create --name master --no-stomp-acceptor --require-login --user artemis --password artemis --no-hornetq-acceptor --no-amqp-acceptor ../../../brokers/replica/replica01
+    ./artemis create --name replica01 --no-stomp-acceptor --require-login --user artemis --password artemis --no-hornetq-acceptor --no-amqp-acceptor ../../../brokers/replica/replica01
     echo "create slave node"
-    ./artemis create --name slave --no-stomp-acceptor --require-login --no-web --user artemis --password artemis --no-hornetq-acceptor --no-amqp-acceptor --port-offset 1 ../../../brokers/replica/replica02
+    ./artemis create --name replica02 --no-stomp-acceptor --require-login --no-web --user artemis --password artemis --no-hornetq-acceptor --no-amqp-acceptor --port-offset 1 ../../../brokers/replica/replica02
     cd $cwd
 
     # enhance default config
